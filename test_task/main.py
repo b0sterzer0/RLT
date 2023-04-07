@@ -21,6 +21,7 @@ logging.basicConfig(level=logging.INFO)
 async def aggregation(message: types.Message):
     input_data = json.loads(message.text)
     data = get_data(input_data)
+    data = json.dumps(data)
     await message.answer(data)
 
 if __name__ == '__main__':

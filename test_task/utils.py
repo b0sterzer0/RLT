@@ -59,7 +59,7 @@ def get_dataset_month_group(items) -> dict:
 
     for item in items:
         i_date = item['dt'].date()
-        date_for_dataset = f'{i_date.strftime("%Y")}-{i_date.strftime("%m")}-01' + 'T00:00:00'
+        date_for_dataset = f"{i_date.strftime('%Y')}-{i_date.strftime('%m')}-01" + "T00:00:00"
         if date_for_dataset in dataset.keys():
             dataset[date_for_dataset] += item['value']
         else:
